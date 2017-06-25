@@ -1,4 +1,5 @@
 resource "aws_launch_configuration" "worker" {
+   availability_zones        = ["us-east-1a", "us-east-1b", "us-east-1c"]
   ebs_block_device {
     device_name = "/dev/xvdf"
     volume_size = "${ var.volume_size["ebs"] }"
